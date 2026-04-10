@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Participation Grade Calculator</title>
+        <link rel="stylesheet" href="participation.css">
+    </head>
+    <body>
+        <h1>Participation Grade Calculator</h1>
+
+        <div id="input-wrapper">
+            <div class="input-pair">
+                <label for="days">Number of Days: </label>
+                <input id="days" name="days" type="number" min="1" max="10" value="5" />
+            </div>
+            <div class="input-pair">
+                <label for="boost">Overall Boost: </label>
+                <input id="boost" name="boost" type="number" min="-5" max="5" value="0"/>
+            </div>
+        </div>
+        <table id="grades-tbl">
+        <tr>
+            <th>10 ⭐</th>
+            <th>9 ⭐</th>
+            <th>8 ⭐</th>
+            <th>7 ⭐</th>
+            <th>6 ⭐</th>
+            <th>5 ⭐</th>
+            <th>4 ⭐</th>
+            <th>3 ⭐</th>
+            <th>2 ⭐</th>
+            <th>1 ⭐</th>
+            <th>0</th>
+            <th>1 ➖</th>
+            <th>2 ➖</th>
+            <th>3 ➖</th>
+            <th>4 ➖</th>
+            <th>5 ➖</th>
+            <th>6 ➖</th>
+            <th>7 ➖</th>
+            <th>8 ➖</th>
+            <th>9 ➖</th>
+            <th>10 ➖</th>
+        </tr>
+        <tr>
+            <td>100%</td>
+            <td>98%</td>
+            <td>96%</td>
+            <td>94%</td>
+            <td>92%</td>
+            <td>90%</td>
+            <td>88%</td>
+            <td>86%</td>
+            <td>84%</td>
+            <td>82%</td>
+            <td>80%</td>
+            <td>78%</td>
+            <td>76%</td>
+            <td>74%</td>
+            <td>72%</td>
+            <td>70%</td>
+            <td>68%</td>
+            <td>66%</td>
+            <td>64%</td>
+            <td>62%</td>
+            <td>60%</td>
+        </tr>
+        </table>
+
+        <hr />
+
+
+
+        <h1>Percentage Computer</h1>
+
+        <div id="input-wrapper">
+            <div class="input-pair">
+                <label for="missed">Number Missed: </label>
+                <input id="missed" name="missed" type="number" min="0" value="5" />
+            </div>
+            <div class="input-pair">
+                <label for="out-of">Out Of: </label>
+                <input id="out-of" name="out-of" type="number" value="50"/>
+            </div>
+        </div>
+        <table id="percent-tbl">
+        <tr>
+            <th>Missed: </th>
+            <th>Number Correct: </th>
+            <th>Percentage: </th>
+        </tr>
+        <tr>
+            <td>100%</td>
+            <td>98%</td>
+            <td>96%</td>
+        </tr>
+        </table>
+
+
+
+        <script src="participation.js"></script>
+    </body>
+</html>
