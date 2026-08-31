@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>RPS Example</title>
+    <link rel="stylesheet" src="rps.css">
+  </head>
+  <body>
+    <h1>RPS Example Code</h1>
+    <p>Here is some example framework for creating an RPS console application in C#.</p>
+    <p><code><pre>using System;
+					
+public class Program
+{
+	public const string PROMPT = "Enter [r]ock, [p]aper, or [s]cissors, or [e]nd game.";
+	public const string SENTINEL = "e";
+	public static string userMove;
+	public static string compMove;
+  //INSERT ALL OTHER GLOBALS HERE
+      
+	public static void Main()
+	{
+		setup();
+		while (userMove != SENTINEL) {
+			determineOutcome();
+		}
+		endGame();
+	}
+
+  //NEEDS TO GET STARTING VALUE FOR userMove
+	public static void setup() {
+	
+	}
+
+  //NEEDS TO CHECK FOR EVERY POSSIBLE OUTCOME AND CALL showDraw(), showWon(), or showLost() BEFORE CALLING setup() AGAIN.
+	public static void determineOutcome() {	
+		getCompMove();
+	
+	}
+
+  //MAKE SURE YOUR VARIABLE FOR THE COMPUTER MOVE IS ALSO compMove
+	public static void getCompMove() {
+		const string CPU_CHOICE_TEXT = "CPU chose ";
+		string _compMoveFull;
+		Random _rnd = new Random();
+		int _compMoveNumber = _rnd.Next(3);
+		
+		if (_compMoveNumber == 0) {
+			_compMoveFull = "rock";
+			compMove = ROCK;
+		} else if (_compMoveNumber == 1) {
+			_compMoveFull = "paper";
+			compMove = PAPER;
+		} else {
+			_compMoveFull = "scissors";
+			compMove = SCISSORS;
+		}
+		
+		Console.WriteLine(CPU_CHOICE_TEXT + _compMoveFull);
+	}
+
+  //NEED TO INCREASE GLOBAL COUNTER AND SHOW TEXT
+	public static void showDraw() {
+		
+	}
+	
+  //NEED TO INCREASE GLOBAL COUNTER AND SHOW TEXT
+	public static void showWon() {
+		
+	}
+		
+  //NEED TO INCREASE GLOBAL COUNTER AND SHOW TEXT
+	public static void showLost() {
+		
+	}
+
+  //NEED TO SHOW GLOBAL COUNTERS AND TEXT
+	public static void endGame() {
+		
+	}
+}</pre></code></p>
+  </body>
+</html>
