@@ -1,0 +1,13 @@
+body {
+  margin: 0px;
+}
+
+p {
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+pre {
+  background-color: #000;
+  color: #0f0;
+}
