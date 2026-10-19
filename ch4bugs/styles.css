@@ -22,6 +22,7 @@ pre {
   color: #0f0;
 }
 
+/**
 .numbered {
   white-space: pre-wrap;
 }
@@ -39,3 +40,5 @@ pre {
   margin-left: auto;
   text-align: right;
 }
+**/
+
