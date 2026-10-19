@@ -22,17 +22,16 @@ pre {
   color: #0f0;
 }
 
-/**
-.numbered {
+pre.numbered {
   white-space: pre-wrap;
 }
-.numbered::before {
+pre.numbered::before {
   counter-reset: listing;
 }
-.numbered {
+pre.numbered code {
   counter-increment: listing;
 }
-.numbered::before {
+pre.numbered code::before {
   content: counter(listing) ". ";
   display: inline-block;
   width: 8em;
@@ -40,4 +39,3 @@ pre {
   margin-left: auto;
   text-align: right;
 }
-**/
