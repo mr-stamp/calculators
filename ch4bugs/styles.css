@@ -21,3 +21,21 @@ pre {
   background-color: #000;
   color: #0f0;
 }
+
+.numbered {
+  white-space: pre-wrap;
+}
+.numbered::before {
+  counter-reset: listing;
+}
+.numbered {
+  counter-increment: listing;
+}
+.numbered::before {
+  content: counter(listing) ". ";
+  display: inline-block;
+  width: 8em;
+  padding-left: auto;
+  margin-left: auto;
+  text-align: right;
+}
