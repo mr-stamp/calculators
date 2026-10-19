@@ -8,64 +8,63 @@
     <h1>Chapter 4 Maintenance and Bugfinding</h1>
     <p>For each of the following programs, examine the pseudocode that follows the introductory comments. Then find and correct all the bugs.</p>
 	  <h2>#1</h2>
-    <p><code><pre class="numbered">// This pseudocode should create a report that contains an
-// apartment complex rental agent's commission. The
-// program accepts the ID number and name of the agent who
-// rented the apartment, and the number of bedrooms in the
-// apartment. The commission is $100 for renting a three-bedroom
-// apartment, $75 for renting a two-bedroom apartment, $55 for
-// renting a one-bedroom apartment, and $30 for renting a studio
-// (zero-bedroom) apartment. Output is the salesperson’s
-// name and ID number and the commission earned on the rental.
-start
-   Declarations
-      num salesPersonID
-      string salesPersonName
-      num numBedrooms
-      num COMM_3 = $100.00
-      num COMM_2 = $75.00
-      num COMM_1 = $55.00
-      num COMM_STUDIO = $30.00
-      num QUIT = 9999
-   getReady()
-   while salesPersonID <> QUIT
-      detailLoop()
-   endwhile
-   finish()
-stop
-
-getReady()
-   output "Enter salesperson ID or ", QUIT, " to quit "
-   output salesperson_ID
-return
-
-detailLoop()
-   output "Enter name "
-   input salesPersonName
-   output "Enter number of bedrooms rented "
-   input numBedrooms
-   if numBedrooms > 3 then
-      commissionEarned = COMM_3
-   else
-      if numBedrooms < 2 then
-         commissionEarned = COMM_2
-      else
-         if numBedrooms > 1 then
-            commission = COMM_1
-         else
-            commission = COMM_4
-         endif
-      endif
-   endif
-   output salesPersonID, salesPersName, commissionEarned
-   output "Enter salesperson ID or ", QUIT, " to quit "
-   input salesPersonID
-return
-
-finish()
-   output "End of report"
-return
-</pre></code></p>
+    <p><code><pre class="numbered"><code>// This pseudocode should create a report that contains an</code>
+<code>// apartment complex rental agent's commission. The</code>
+<code>// program accepts the ID number and name of the agent who</code>
+<code>// rented the apartment, and the number of bedrooms in the</code>
+<code>// apartment. The commission is $100 for renting a three-bedroom</code>
+<code>// apartment, $75 for renting a two-bedroom apartment, $55 for</code>
+<code>// renting a one-bedroom apartment, and $30 for renting a studio</code>
+<code>// (zero-bedroom) apartment. Output is the salesperson’s</code>
+<code>// name and ID number and the commission earned on the rental.</code>
+<code>start</code>
+<code>   Declarations</code>
+<code>      num salesPersonID</code>
+<code>      string salesPersonName</code>
+<code>      num numBedrooms</code>
+<code>      num COMM_3 = $100.00</code>
+<code>      num COMM_2 = $75.00</code>
+<code>      num COMM_1 = $55.00</code>
+<code>      num COMM_STUDIO = $30.00</code>
+<code>      num QUIT = 9999</code>
+<code>   getReady()</code>
+<code>   while salesPersonID <> QUIT</code>
+<code>      detailLoop()</code>
+<code>   endwhile</code>
+<code>   finish()</code>
+<code>stop</code>
+<code></code>
+<code>getReady()</code>
+<code>   output "Enter salesperson ID or ", QUIT, " to quit "</code>
+<code>   output salesperson_ID</code>
+<code>return</code>
+<code></code>
+<code>detailLoop()</code>
+<code>   output "Enter name "</code>
+<code>   input salesPersonName</code>
+<code>   output "Enter number of bedrooms rented "</code>
+<code>   input numBedrooms</code>
+<code>   if numBedrooms > 3 then</code>
+<code>      commissionEarned = COMM_3</code>
+<code>   else</code>
+<code>      if numBedrooms < 2 then</code>
+<code>         commissionEarned = COMM_2</code>
+<code>      else</code>
+<code>         if numBedrooms > 1 then</code>
+<code>            commission = COMM_1</code>
+<code>         else</code>
+<code>            commission = COMM_4</code>
+<code>         endif</code>
+<code>      endif</code>
+<code>   endif</code>
+<code>   output salesPersonID, salesPersName, commissionEarned</code>
+<code>   output "Enter salesperson ID or ", QUIT, " to quit "</code>
+<code>   input salesPersonID</code>
+<code>return</code>
+<code></code>
+<code>finish()</code>
+<code>   output "End of report"</code>
+<code>return</code></pre></code></p>
 
 	  <h2>#2</h2>
     <p><code><pre class="numbered">// This pseudocode should create a list that describes annual profit
