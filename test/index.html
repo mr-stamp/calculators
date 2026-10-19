@@ -67,146 +67,144 @@
 <code>return</code></pre></code></p>
 
 	  <h2>#2</h2>
-    <p><code><pre class="numbered">// This pseudocode should create a list that describes annual profit
-// statistics for a retail store. Input records contain a department
-// name (for example, “Cosmetics”) and profits for each quarter for
-// the last two years. The program should determine whether
-// the profit is higher, lower, or the same
-// for this full year compared to the last full year.
-
-start
-   Declarations
-      string department
-      num salesQuarter1ThisYear
-      num salesQuarter2ThisYear
-      num salesQuarter3ThisYear
-      num salesQuarter3ThisYear
-      num salesQuarter1LastYear  
-      num salesQuarter2LastYear
-      num salesQuarter3ThisYear
-      num salesQuarter4LastYear  
-      num totalThisYear
-      num totalLastYear
-      string status
-      num QUIT = "ZZZZ"
-   housekeeping()
-   while department <> QUIT
-      compareProfit()
-   endwhile
-   finishUp()
-stop
-
-housekeeping()
-   output "Enter department name or ", QUIT, " to quit "
-   input dept
-return
-
-compareProfit()
-   getSalesData()
-   sumSalesData()
-   if totalThisYear = totalLastYear then
-      status = "Higher"
-   else
-      if totalThisYear <= totalLastYear then
-         status = "Lower"
-      else
-         status = "Same"
-     endif
-   endif
-   output department, status
-   output "Enter department name or ", QUIT, " to quit "
-   input department
-return
-
-getSalesData()
-   output "Enter sales for first quarter this year "
-   input salesQuarter1ThisYear
-   output "Enter sales for second quarter this year "
-   input salesQuarter1ThisYear
-   output "Enter sales for third quarter this year "
-   input salesQuarter1ThisYear
-   output "Enter sales for fourth quarter this year "
-   input salesQuarter4ThisYear
-   output "Enter sales for first quarter last year "
-   input salesQuarter1LastYear
-   output "Enter sales for second quarter last year "
-   input salesQuarter3LastYear
-   output "Enter sales for third quarter last year "
-   input salesQuarter3LastYear
-   output "Enter sales for fourth quarter last year "
-   input salesQuarter3LastYear
-return
-
-sumSalesData()
-    totalThisYear = salesQuarter1ThisYear + salesQuarter2ThisYear +
-       salesQuarter2ThisYear + salesQuarter4ThisYear
-    totalLastYear = salesQuarter2LastYear + salesQuarter2LastYear +
-       salesQuarter3LastYear + salesQuarter4LastYear
-return
-
-finishUp()
-   output "End of report"
-return
-</pre></code></p>
+    <p><code><pre class="numbered"><code>// This pseudocode should create a list that describes annual profit</code>
+<code>// statistics for a retail store. Input records contain a department</code>
+<code>// name (for example, “Cosmetics”) and profits for each quarter for</code>
+<code>// the last two years. The program should determine whether</code>
+<code>// the profit is higher, lower, or the same</code>
+<code>// for this full year compared to the last full year.</code>
+<code></code>
+<code>start</code>
+<code>   Declarations</code>
+<code>      string department</code>
+<code>      num salesQuarter1ThisYear</code>
+<code>      num salesQuarter2ThisYear</code>
+<code>      num salesQuarter3ThisYear</code>
+<code>      num salesQuarter3ThisYear</code>
+<code>      num salesQuarter1LastYear</code>
+<code>      num salesQuarter2LastYear</code>
+<code>      num salesQuarter3ThisYear</code>
+<code>      num salesQuarter4LastYear</code>
+<code>      num totalThisYear</code>
+<code>      num totalLastYear</code>
+<code>      string status</code>
+<code>      num QUIT = "ZZZZ"</code>
+<code>   housekeeping()</code>
+<code>   while department <> QUIT</code>
+<code>      compareProfit()</code>
+<code>   endwhile</code>
+<code>   finishUp()</code>
+<code>stop</code>
+<code></code>
+<code>housekeeping()</code>
+<code>   output "Enter department name or ", QUIT, " to quit "</code>
+<code>   input dept</code>
+<code>return</code>
+<code></code>
+<code>compareProfit()</code>
+<code>   getSalesData()</code>
+<code>   sumSalesData()</code>
+<code>   if totalThisYear = totalLastYear then</code>
+<code>      status = "Higher"</code>
+<code>   else</code>
+<code>      if totalThisYear <= totalLastYear then</code>
+<code>         status = "Lower"</code>
+<code>      else</code>
+<code>         status = "Same"</code>
+<code>     endif</code>
+<code>   endif</code>
+<code>   output department, status</code>
+<code>   output "Enter department name or ", QUIT, " to quit "</code>
+<code>   input department</code>
+<code>return</code>
+<code></code>
+<code>getSalesData()</code>
+<code>   output "Enter sales for first quarter this year "</code>
+<code>   input salesQuarter1ThisYear</code>
+<code>   output "Enter sales for second quarter this year "</code>
+<code>   input salesQuarter1ThisYear</code>
+<code>   output "Enter sales for third quarter this year "</code>
+<code>   input salesQuarter1ThisYear</code>
+<code>   output "Enter sales for fourth quarter this year "</code>
+<code>   input salesQuarter4ThisYear</code>
+<code>   output "Enter sales for first quarter last year "</code>
+<code>   input salesQuarter1LastYear</code>
+<code>   output "Enter sales for second quarter last year "</code>
+<code>   input salesQuarter3LastYear</code>
+<code>   output "Enter sales for third quarter last year "</code>
+<code>   input salesQuarter3LastYear</code>
+<code>   output "Enter sales for fourth quarter last year "</code>
+<code>   input salesQuarter3LastYear</code>
+<code>return</code>
+<code></code>
+<code>sumSalesData()</code>
+<code>    totalThisYear = salesQuarter1ThisYear + salesQuarter2ThisYear +</code>
+<code>       salesQuarter2ThisYear + salesQuarter4ThisYear</code>
+<code>    totalLastYear = salesQuarter2LastYear + salesQuarter2LastYear +</code>
+<code>       salesQuarter3LastYear + salesQuarter4LastYear</code>
+<code>return</code>
+<code></code>
+<code>finishUp()</code>
+<code>   output "End of report"</code>
+<code>return</code></pre></code></p>
 
 	  <h2>#3</h2>
-    <p><code><pre class="numbered">// This pseudocode should determine and output the rental fees for cars.
-// Standard cars rent for $65 per day, compacts rent for $40 per day,
-// and subcompacts rent for $30 per day. Rentals for at least 7 days
-// receive a 20% discount. An error message is displayed if the car type
-// is not valid.
-
-start
-   Declarations
-      string carType
-      num days
-      num STD_RATE = 65
-      num COM_RATE = 40
-      num SUB_RATE = 30
-      num DAYS_FOR_DISCOUNT = 10
-      num DISCOUNT_RATE = 0.20
-      string QUIT = "ZZZZ"
-   getReady()
-   while carType <> QUIT
-      detailLoop()
-   endwhile
-   finish()
-stop
-
-getReady()
-   output Enter car type or , QUIT, to quit
-   input carType
-return
-
-detailLoop()
-   output "Enter days rented "
-   input days
-   if carType = "Standard" then
-      rate = STD_RATE
-   else
-      if car_Type = "Compact" then
-          rate = COMPACT_RATE
-      else
-         if carType = "Subcompact" then
-            rate = SUB_RATE
-         else
-            rate = 0
-            output "Invalid car type"
-         endif
-      endif
-   endif
-   if rate <> 0
-      if days >= DAYS_FOR_DISCOUNT then
-         rate = rate * DISCOUNT_RATE
-      endif
-      output carType, days
-   output "Enter car type or ", QUIT, " to quit "
-   input carType
-return
-
-finish()
-   output "End of program"
-return
-</pre></code></p>
+    <p><code><pre class="numbered"><code>// This pseudocode should determine and output the rental fees for cars.</code>
+<code>// Standard cars rent for $65 per day, compacts rent for $40 per day,</code>
+<code>// and subcompacts rent for $30 per day. Rentals for at least 7 days</code>
+<code>// receive a 20% discount. An error message is displayed if the car type</code>
+<code>// is not valid.</code>
+<code></code>
+<code>start</code>
+<code>   Declarations</code>
+<code>      string carType</code>
+<code>      num days</code>
+<code>      num STD_RATE = 65</code>
+<code>      num COM_RATE = 40</code>
+<code>      num SUB_RATE = 30</code>
+<code>      num DAYS_FOR_DISCOUNT = 10</code>
+<code>      num DISCOUNT_RATE = 0.20</code>
+<code>      string QUIT = "ZZZZ"</code>
+<code>   getReady()</code>
+<code>   while carType <> QUIT</code>
+<code>      detailLoop()</code>
+<code>   endwhile</code>
+<code>   finish()</code>
+<code>stop</code>
+<code></code>
+<code>getReady()</code>
+<code>   output Enter car type or , QUIT, to quit</code>
+<code>   input carType</code>
+<code>return</code>
+<code></code>
+<code>detailLoop()</code>
+<code>   output "Enter days rented "</code>
+<code>   input days</code>
+<code>   if carType = "Standard" then</code>
+<code>      rate = STD_RATE</code>
+<code>   else</code>
+<code>      if car_Type = "Compact" then</code>
+<code>          rate = COMPACT_RATE</code>
+<code>      else</code>
+<code>         if carType = "Subcompact" then</code>
+<code>            rate = SUB_RATE</code>
+<code>         else</code>
+<code>            rate = 0</code>
+<code>            output "Invalid car type"</code>
+<code>         endif</code>
+<code>      endif</code>
+<code>   endif</code>
+<code>   if rate <> 0</code>
+<code>      if days >= DAYS_FOR_DISCOUNT then</code>
+<code>         rate = rate * DISCOUNT_RATE</code>
+<code>      endif</code>
+<code>      output carType, days</code>
+<code>   output "Enter car type or ", QUIT, " to quit "</code>
+<code>   input carType</code>
+<code>return</code>
+<code></code>
+<code>finish()</code>
+<code>   output "End of program"</code>
+<code>return</code></pre></code></p>
   </body>
 </html>
