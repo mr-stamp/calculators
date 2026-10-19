@@ -68,8 +68,146 @@ return
 </pre></code></p>
 
 	  <h2>#2</h2>
-    <p><code><pre>
-		
-	</pre></code></p>
+    <p><code><pre>// This pseudocode should create a list that describes annual profit
+// statistics for a retail store. Input records contain a department
+// name (for example, “Cosmetics”) and profits for each quarter for
+// the last two years. The program should determine whether
+// the profit is higher, lower, or the same
+// for this full year compared to the last full year.
+
+start
+   Declarations
+      string department
+      num salesQuarter1ThisYear
+      num salesQuarter2ThisYear
+      num salesQuarter3ThisYear
+      num salesQuarter3ThisYear
+      num salesQuarter1LastYear  
+      num salesQuarter2LastYear
+      num salesQuarter3ThisYear
+      num salesQuarter4LastYear  
+      num totalThisYear
+      num totalLastYear
+      string status
+      num QUIT = "ZZZZ"
+   housekeeping()
+   while department <> QUIT
+      compareProfit()
+   endwhile
+   finishUp()
+stop
+
+housekeeping()
+   output "Enter department name or ", QUIT, " to quit "
+   input dept
+return
+
+compareProfit()
+   getSalesData()
+   sumSalesData()
+   if totalThisYear = totalLastYear then
+      status = "Higher"
+   else
+      if totalThisYear <= totalLastYear then
+         status = "Lower"
+      else
+         status = "Same"
+     endif
+   endif
+   output department, status
+   output "Enter department name or ", QUIT, " to quit "
+   input department
+return
+
+getSalesData()
+   output "Enter sales for first quarter this year "
+   input salesQuarter1ThisYear
+   output "Enter sales for second quarter this year "
+   input salesQuarter1ThisYear
+   output "Enter sales for third quarter this year "
+   input salesQuarter1ThisYear
+   output "Enter sales for fourth quarter this year "
+   input salesQuarter4ThisYear
+   output "Enter sales for first quarter last year "
+   input salesQuarter1LastYear
+   output "Enter sales for second quarter last year "
+   input salesQuarter3LastYear
+   output "Enter sales for third quarter last year "
+   input salesQuarter3LastYear
+   output "Enter sales for fourth quarter last year "
+   input salesQuarter3LastYear
+return
+
+sumSalesData()
+    totalThisYear = salesQuarter1ThisYear + salesQuarter2ThisYear +
+       salesQuarter2ThisYear + salesQuarter4ThisYear
+    totalLastYear = salesQuarter2LastYear + salesQuarter2LastYear +
+       salesQuarter3LastYear + salesQuarter4LastYear
+return
+
+finishUp()
+   output "End of report"
+return
+</pre></code></p>
+
+	  <h2>#3</h2>
+    <p><code><pre>// This pseudocode should determine and output the rental fees for cars.
+// Standard cars rent for $65 per day, compacts rent for $40 per day,
+// and subcompacts rent for $30 per day. Rentals for at least 7 days
+// receive a 20% discount. An error message is displayed if the car type
+// is not valid.
+
+start
+   Declarations
+      string carType
+      num days
+      num STD_RATE = 65
+      num COM_RATE = 40
+      num SUB_RATE = 30
+      num DAYS_FOR_DISCOUNT = 10
+      num DISCOUNT_RATE = 0.20
+      string QUIT = "ZZZZ"
+   getReady()
+   while carType <> QUIT
+      detailLoop()
+   endwhile
+   finish()
+stop
+
+getReady()
+   output Enter car type or , QUIT, to quit
+   input carType
+return
+
+detailLoop()
+   output "Enter days rented "
+   input days
+   if carType = "Standard" then
+      rate = STD_RATE
+   else
+      if car_Type = "Compact" then
+          rate = COMPACT_RATE
+      else
+         if carType = "Subcompact" then
+            rate = SUB_RATE
+         else
+            rate = 0
+            output "Invalid car type"
+         endif
+      endif
+   endif
+   if rate <> 0
+      if days >= DAYS_FOR_DISCOUNT then
+         rate = rate * DISCOUNT_RATE
+      endif
+      output carType, days
+   output "Enter car type or ", QUIT, " to quit "
+   input carType
+return
+
+finish()
+   output "End of program"
+return
+</pre></code></p>
   </body>
 </html>
