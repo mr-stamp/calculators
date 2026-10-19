@@ -40,6 +40,7 @@ pre.numbered code {
 
 pre.numbered code::before {
   content: counter(listing) ". ";
+  color: #0ff;
   display: inline-block;
   float: left;
   height: 3em;
