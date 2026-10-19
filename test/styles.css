@@ -1,0 +1,43 @@
+body {
+  margin: 0px;
+  background-color: #aaf;
+  font-family: sans-serif;
+}
+
+h1, p {
+  text-align: center;
+}
+
+p, pre, h2 {
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+pre {
+  text-align: left;
+  padding: 15px;
+  padding: 15px;
+  border-radius: 10px;
+  background-color: #000;
+  color: #0f0;
+}
+
+/**
+.numbered {
+  white-space: pre-wrap;
+}
+.numbered::before {
+  counter-reset: listing;
+}
+.numbered {
+  counter-increment: listing;
+}
+.numbered::before {
+  content: counter(listing) ". ";
+  display: inline-block;
+  width: 8em;
+  padding-left: auto;
+  margin-left: auto;
+  text-align: right;
+}
+**/
