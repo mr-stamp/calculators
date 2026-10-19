@@ -1,0 +1,23 @@
+body {
+  margin: 0px;
+  background-color: #aaf;
+  font-family: sans-serif;
+}
+
+h1, p {
+  text-align: center;
+}
+
+p, pre {
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+pre {
+  text-align: left;
+  padding: 15px;
+  padding: 15px;
+  border-radius: 10px;
+  background-color: #000;
+  color: #0f0;
+}
