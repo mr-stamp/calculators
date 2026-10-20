@@ -43,7 +43,7 @@ pre.numbered code::before {
   color: #0ff;
   display: inline-block;
   float: left;
-  height: 3em;
+  height: 1em;
   padding-left: auto;
   margin-left: auto;
   text-align: right;
