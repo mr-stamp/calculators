@@ -22,23 +22,29 @@ pre {
   color: #0f0;
 }
 
-/**
-.numbered {
+pre.numbered {
   white-space: pre-wrap;
+  margin-left: 8em;
 }
-.numbered::before {
+
+pre.numbered::before {
   counter-reset: listing;
 }
-.numbered {
+
+pre.numbered code {
   counter-increment: listing;
+  text-align: left;
+  float: left;
+  clear: left;
 }
-.numbered::before {
+
+pre.numbered code::before {
   content: counter(listing) ". ";
+  color: #0ff;
   display: inline-block;
-  width: 8em;
+  float: left;
+  height: 1em;
   padding-left: auto;
   margin-left: auto;
   text-align: right;
 }
-**/
-
