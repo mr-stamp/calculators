@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Chapter 5 Bugfinding</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <h1>Chapter 5 Maintenance and Bugfinding</h1>
+    <p>For each of the following programs, examine the pseudocode that follows the introductory comments. Then find and correct all the bugs.</p>
+	  <h2>#1</h2>
+    <p><pre class="numbered"><code>// This program is supposed to display every fifth year</code>
+<code>// starting with 2017; that is, 2017, 2022, 2027, 2032,</code>
+<code>// and so on, for 30 years.</code>
+<code>start</code>
+<code>   Declarations</code>
+<code>      num year</code>
+<code>      num START_YEAR = 2017</code>
+<code>      num FACTOR = 5</code>
+<code>      num END_YEAR = 30</code>
+<code>   year = START_YEAR</code>
+<code>   while year <= END_YEAR</code>
+<code>      output year</code>
+<code>   endif</code>
+<code>stop</code>
+</pre></p>
+
+	  <h2>#2</h2>
+    <p><pre class="numbered"><code>// A standard mortgage is paid monthly over 30 years.</code>
+<code>// This program is intended to output 360 payment coupons</code>
+<code>// for each new borrower at a mortgage company.</code>
+<code>// Each coupon lists the month number, year number,</code>
+<code>// and a friendly mailing reminder.</code>
+<code>start</code>
+<code>   Declarations</code>
+<code>      num MONTHS = 12</code>
+<code>      num YEARS = 30</code>
+<code>      string MSG = "Remember to allow 5 days for mailing"</code>
+<code>      num acctNum</code>
+<code>      num yearCounter</code>
+<code>   housekeeping()</code>
+<code>   while acctNUm <> QUIT</code>
+<code>      printCoupons()</code>
+<code>   endwhile</code>
+<code>   finish()</code>
+<code>stop</code>
+<code></code>
+<code>housekeeping()</code>
+<code>   print "Enter account number or ", QUIT, " to quit "</code>
+<code>   input acctNum</code>
+<code>return</code>
+<code></code>
+<code>printCoupons()</code>
+<code>   while yearCounter <= YEARS</code>
+<code>      while monthCounter <= MONTHS</code>
+<code>         print acctNum, monthCounter, yearCounter, MSG</code>
+<code>         monthCounter = monthCounter + 1</code>
+<code>      endwhile</code>
+<code>   endwhile</code>
+<code>   output "Enter account number or ", QUIT, " to quit "</code>
+<code>   input acctNum</code>
+<code>return</code>
+<code></code>
+<code>finish()</code>
+<code>   output "End of job"</code>
+<code>return</code>
+</pre></p>
+
+	  <h2>#3</h2>
+    <p><pre class="numbered"><code>// This program displays every combination of three-digits</code>
+<code>start</code>
+<code>   Declarations</code>
+<code>     num digit1 = 0</code>
+<code>     num digit2 = 0</code>
+<code>     num digit3 = 0</code>
+<code>   while digit1 <= 9</code>
+<code>      while digit2 <= 9</code>
+<code>         while digit3 <= 9</code>
+<code>            output digit1, digit2, digit3</code>
+<code>            digit1 = digit1 + 1</code>
+<code>         endwhile</code>
+<code>         digit2 = digit2 + 1</code>
+<code>      endwhile</code>
+<code>      digit3 = digit3 + 1  </code>
+<code>   endwhile</code>
+<code>stop</code>
+</pre></p>
+
+<hr>
+    <h2>Maintenance</h2>
+    <p>For the program below, examine the pseudocode that follows the introductory comments. Then modify the program to address the requested improvement.</p>
+    <p><pre class="numbered"><code>// The QuickCopy company currently makes 100,000 copies per year</code>
+<code>// at 15 cents each.</code>
+<code>// They expect to increase the number of copies produced</code>
+<code>// by 4 percent per year each year for the next 10 years,</code>
+<code>// starting with this year.</code>
+<code>// They also expect the price of each copy to increase</code>
+<code>// by 3 cents per year, starting with this year.</code>
+<code>// This program displays the company's expected</code>
+<code>// income for each of the next 10 years.</code>
+<code>// Modify it to be more efficient.</code>
+<code>start</code>
+<code>   Declarations</code>
+<code>      num year = 1</code>
+<code>      num copies = 100000</code>
+<code>      num price = 0.15</code>
+<code>      num total = 0</code>
+<code>      num COPIES_INCREASE = 0.04</code>
+<code>      num PRICE_INCREASE = 0.03</code>
+<code>      copies = copies + copies * COPIES_INCREASE</code>
+<code>      price = price + price * PRICE_INCREASE</code>
+<code>      total = total + copies * price</code>
+<code>      output year, total</code>
+<code>      year = year + 1</code>
+<code>      copies = copies + copies * COPIES_INCREASE</code>
+<code>      price = price + price * PRICE_INCREASE</code>
+<code>      total = total + copies * price</code>
+<code>      output year, total</code>
+<code>      year = year + 1</code>
+<code>      copies = copies + copies * COPIES_INCREASE</code>
+<code>      price = price + price * PRICE_INCREASE</code>
+<code>      total = total + copies * price</code>
+<code>      output year, total</code>
+<code>      year = year + 1</code>
+<code>      copies = copies + copies * COPIES_INCREASE</code>
+<code>      price = price + price * PRICE_INCREASE</code>
+<code>      total = total + copies * price</code>
+<code>      output year, total</code>
+<code>      year = year + 1</code>
+<code>      copies = copies + copies * COPIES_INCREASE</code>
+<code>      price = price + price * PRICE_INCREASE</code>
+<code>      total = total + copies * price</code>
+<code>      output year, total</code>
+<code>      year = year + 1</code>
+<code>      copies = copies + copies * COPIES_INCREASE</code>
+<code>      price = price + price * PRICE_INCREASE</code>
+<code>      total = total + copies * price</code>
+<code>      output year, total</code>
+<code>      year = year + 1</code>
+<code>      copies = copies + copies * COPIES_INCREASE</code>
+<code>      price = price + price * PRICE_INCREASE</code>
+<code>      total = total + copies * price</code>
+<code>      output year, total</code>
+<code>      year = year + 1</code>
+<code>      copies = copies + copies * COPIES_INCREASE</code>
+<code>      price = price + price * PRICE_INCREASE</code>
+<code>      total = total + copies * price</code>
+<code>      output year, total</code>
+<code>      year = year + 1</code>
+<code>      copies = copies + copies * COPIES_INCREASE</code>
+<code>      price = price + price * PRICE_INCREASE</code>
+<code>      total = total + copies * price</code>
+<code>      output year, total</code>
+<code>      year = year + 1</code>
+<code>      copies = copies + copies * COPIES_INCREASE</code>
+<code>      price = price + price * PRICE_INCREASE</code>
+<code>      total = total + copies * price</code>
+<code>      output year, total</code>
+<code>stop</code></pre></p>
+  </body>
+</html>
